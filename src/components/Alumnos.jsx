@@ -45,6 +45,7 @@ const Alumnos = () => {
 
         reader.onload = () => {
           SetAlumnos([...alumnos, { matricula: matricula, nombre: nombre, carrera: carreraSeleccionada, foto: reader.result }])
+          SetCarretas([...carreras])
         }
         alert('Registrado exitosamente')
 
@@ -81,7 +82,7 @@ const Alumnos = () => {
 
   const eliminar = (identificador) => {
     // alert(`Has elegido la matricula ${identificador}`)
-    alumnos.map((alumno, index, arr) => {
+    alumnos.forEach((alumno, index, arr) => {
       // const index = arr.indexOf('');
       if (alumno.matricula === identificador) {
         if (index !== -1) {
@@ -109,7 +110,7 @@ const Alumnos = () => {
   
     const carreraSeleccionada = carreras[carrera-1].nombre;
   
-    const indice = alumnos.findIndex(alumno => alumno.matricula == Number(matricula));
+    const indice = alumnos.findIndex(alumno => Number(alumno.matricula) === Number(matricula));
     try {
       if (indice !== -1) {
 
