@@ -1,0 +1,25 @@
+.black{
+    width: 20vw;
+    font-size: 1.2rem; display: none;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+body{
+    background-color: #2c3034;
+    color: white;
+}
+.table{
+    margin-top: 50px;
+    margin-left: 100px;
+    display: none;
+    width: 720px;
+    border: 3px solid white;
+    color: white;
+}
+.table a {
+    margin-top: 20px;
+}
+.imgAlumno{
+    width: 60%;
+    border-radius: 100%;
+}
